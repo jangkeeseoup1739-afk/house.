@@ -1,0 +1,13 @@
+[
+  {
+    "id": "inq-1790391018791-f08y",
+    "name": "정상작동확인고객",
+    "phone": "010-8873-7258",
+    "category": "청약",
+    "interestRegion": "경기 동탄/화성",
+    "preferredTime": "즉시 상담",
+    "message": "실시간 알람 및 관리자 접수 확인 테스트",
+    "status": "접수대기",
+    "createdAt": "2026.09.26 02:50"
+  }
+]

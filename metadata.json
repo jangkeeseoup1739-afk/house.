@@ -1,0 +1,8 @@
+{
+  "name": "Remix 부동산 정보 및 분양 플랫폼",
+  "description": "하우스 앤 에셋 (HOUSE \u0026 ASSET) - 부동산과 자산을 쉽게 이해하는 곳. 최신 청약·사업자대출·세금 정보, 신규 분양정보 정교한 필터링 검색, 실시간 알림, 1:1 상담문의(010-8873-7258) 및 관리자 CMS",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

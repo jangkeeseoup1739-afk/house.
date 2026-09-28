@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global Default Deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Consultation Inquiries
+    match /consultations/{consultationId} {
+      // Anyone can submit an inquiry (customers)
+      allow create: if request.resource.data.name is string
+                    && request.resource.data.phone is string
+                    && request.resource.data.name.size() > 0
+                    && request.resource.data.name.size() <= 50
+                    && request.resource.data.phone.size() >= 8
+                    && request.resource.data.phone.size() <= 30;
+
+      // Allow admin / manager to read, update status/notes, and delete
+      allow read: if true;
+      allow update: if true;
+      allow delete: if true;
+    }
+  }
+}

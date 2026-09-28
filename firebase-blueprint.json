@@ -1,0 +1,28 @@
+{
+  "entities": {
+    "consultation": {
+      "title": "Consultation Inquiry",
+      "description": "Customer consultation request or presale alert subscription",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 100 },
+        "name": { "type": "string", "maxLength": 50 },
+        "phone": { "type": "string", "maxLength": 30 },
+        "category": { "type": "string", "maxLength": 50 },
+        "interestRegion": { "type": "string", "maxLength": 100 },
+        "preferredTime": { "type": "string", "maxLength": 100 },
+        "message": { "type": "string", "maxLength": 2000 },
+        "status": { "type": "string", "enum": ["접수대기", "상담진행중", "상담완료", "보류"] },
+        "adminMemo": { "type": "string", "maxLength": 1000 },
+        "createdAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["name", "phone", "category", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/consultations/{consultationId}": {
+      "schema": "consultation",
+      "description": "Collection of customer consultation inquiries synced across devices"
+    }
+  }
+}
